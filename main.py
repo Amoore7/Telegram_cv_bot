@@ -37,7 +37,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = update.message.text.strip()
 
     # تهيئة بيانات المستخدم إذا لم تكن موجودة
-    if user_id not in user_
+    if user_id not in user_data:
         user_data[user_id] = {"step": 0}
 
     step = user_data[user_id]["step"]
